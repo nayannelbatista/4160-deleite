@@ -1,0 +1,103 @@
+.product-detail-card {
+  max-width: 1200px; 
+  margin: 40px auto 80px;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  cursor: pointer;
+}
+
+.back-text {
+  font-family: Agbalumo;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 32px;
+  letter-spacing: 0.25px;
+}
+
+.content {
+  display: flex;
+  gap: 20px;
+}
+
+.product-image img {
+  border-radius: 10px;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 1;
+}
+
+.product-title {
+  color: #3f51b5;
+  font-family: Agbalumo;
+  font-size: 34px;
+  font-weight: bold;
+  line-height: 40px;
+  letter-spacing: 0.25px;
+  text-align: left;
+}
+
+.product-ingredients {
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  text-align: left;
+  color: #424242;
+}
+
+.product-price {
+  font-family: Agbalumo;
+  font-size: 23px;
+  font-weight: bold;
+  line-height: 32px;
+  text-align: left;
+}
+
+mat-form-field {
+  width: min-content;
+}
+
+.options{
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.full-width {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.add-to-cart {
+  align-self: flex-end;
+}
+
+
+.loading-placeholder {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-top: 24px;
+
+  p {
+    font-size: 18px;
+    font-family: Agbalumo;
+    color: #424242;
+  }
+}

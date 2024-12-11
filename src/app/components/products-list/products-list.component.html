@@ -1,0 +1,18 @@
+<div class="loading-placeholder" *appShellRender>
+  <mat-spinner></mat-spinner>
+  <p>Carregando produtos...</p>
+</div>
+
+@for (group of productsByCategory; track group.category) {
+  <div class="product-category">
+    <h2>{{ group.category }}</h2>
+    <div class="product-list">
+        @for (product of group.products; track product.id) {
+          <div class="product-card">
+            <app-product-card [product]="product"></app-product-card>
+          </div>
+        }
+    </div> 
+  </div>  
+}
+

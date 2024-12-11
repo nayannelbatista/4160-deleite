@@ -1,0 +1,24 @@
+mat-toolbar {
+  background-color: #3F51B5;
+  height: 88px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.mat-toolbar-single-row {
+  box-sizing: content-box;
+}
+
+.logo {
+  height: 32px;
+}
+
+mat-icon {
+  color: white;
+}
+
+.toolbar-buttons button:first-child{
+  margin-right: 16px;
+}

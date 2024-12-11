@@ -1,0 +1,24 @@
+h1 {
+  color: #3F51B5;
+  font-family: Agbalumo;
+  font-size: 78px;
+  font-weight: 600;
+  line-height: 97.5px;
+}
+
+.banner {
+  background-image: url('../../../../public/assets/images/banner.png');
+  background-repeat: no-repeat;
+  padding: 48px;
+  width: 100%;
+}
+
+.banner-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-content img {
+  max-width: 450px;
+}

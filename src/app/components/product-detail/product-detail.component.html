@@ -1,0 +1,56 @@
+<mat-card class="product-detail-card">
+  <div [routerLink]="['/']" class="header">
+    <button mat-icon-button>
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <span class="back-text">Detalhes do produto</span>
+  </div>
+
+  <div class="loading-placeholder" *appShellRender>
+    <mat-spinner></mat-spinner>
+    <p>Carregando detalhes do produto</p>
+  </div>
+
+  @if (product) {
+  <div class="content">
+    <div class="product-image" *appShellNoRender>
+      <img [src]="product.imageDetails" alt="{{ product.title }}">
+    </div>
+
+    <div class="product-info">
+      <h2 class="product-title">{{ product.title }}</h2>
+      <p class="product-ingredients">Ingredientes: {{ product.ingredients }}</p>
+      <h3 class="product-price">{{ product.price| currency:'BRL' }}</h3>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Quantidade</mat-label>
+        <mat-select>
+          @for (quantity of quantities; track quantity) {
+          <mat-option [value]="quantity">
+            {{ quantity }}
+          </mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+
+      <div class="options">
+        <p>Selecione as opções:</p>
+        <mat-checkbox>Consumir no local</mat-checkbox>
+        <mat-checkbox>Sem lactose</mat-checkbox>
+        <mat-checkbox>Sem calda</mat-checkbox>
+        <mat-checkbox>Sem açúcar</mat-checkbox>
+        <mat-checkbox>Leite vegetal</mat-checkbox>
+      </div>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Alguma observação?</mat-label>
+        <textarea matInput></textarea>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" class="add-to-cart">
+        ADICIONAR AO CARRINHO
+      </button>
+    </div>
+  </div>
+  }
+</mat-card>

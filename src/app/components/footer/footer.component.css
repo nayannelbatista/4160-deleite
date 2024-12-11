@@ -1,0 +1,26 @@
+footer {
+  background-color: #3F51B5;
+  text-align: center;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 16px;
+  width: 100%;
+}
+
+.social-icons, .footer-text {
+  font-family: Roboto;
+  font-size: 16px;
+}
+
+.social-icons {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.social-icons img {
+  margin-left: 8px;
+  width: 24px;
+}
