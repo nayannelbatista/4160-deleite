@@ -1,0 +1,170 @@
+.cart-container {
+  margin: 24px auto 48px;
+  padding: 16px;
+  max-width: 800px;
+}
+
+
+.cart-content {
+  display: flex;
+  gap: 24px;
+}
+
+
+.cart-items {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+
+  h2 {
+    font-family: Agbalumo;
+    font-size: 34px;
+    font-weight: bold;
+    line-height: 40px;
+    letter-spacing: 0.25px;
+    text-align: left;
+    color: #424242;
+    margin-left: 8px;
+  }
+}
+
+
+.cart-item img {
+  width: 80px;
+  height: auto;
+  border-radius: 8px;
+}
+
+
+.cart-item h3 {
+  flex: 1;
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  min-width: 170px;
+}
+
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 0 40px 0 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+
+.cart-item .item-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-grow: 1;
+}
+
+
+.cart-item mat-form-field {
+  flex: 0 0 auto;
+  width: 100px;
+  max-width: 100px;
+}
+
+
+.cart-item p {
+  margin: 0;
+  font-size: 16px;
+  white-space: nowrap;
+  font-weight: bold;
+  text-align: right;
+  min-width: 100px;
+}
+
+
+.delete-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.delete-container button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  height: 24px;
+  width: 24px;
+  padding: 0;
+}
+
+
+.delete-container span {
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+
+.total-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px;
+  gap: 32px;
+}
+
+
+.total-container h3 {
+  font-family: Agbalumo;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 40px;
+  letter-spacing: 0.25px;
+  text-align: left;
+}
+
+
+.total-container p {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Agbalumo;
+  line-height: 32px;
+  text-align: left;
+}
+
+
+.total-container button {
+  width: 100%;
+  max-width: 250px;
+  white-space: nowrap;
+  font-size: 14px;
+  padding: 0 32px;
+}
+
+
+button[mat-stroked-button] {
+  margin-top: 8px;
+  background-color: #F5F5F5;
+}
+
+
+.back-home {
+  margin: 48px 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 12px;
+}
+
+
+.back-text {
+  font-family: Agbalumo;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 32px;
+  letter-spacing: 0.25px;
+}
