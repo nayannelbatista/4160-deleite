@@ -37,14 +37,11 @@ import { AppShellRenderDirective } from '../../directives/app-shell-render.direc
 export class ProductDetailComponent implements OnInit{
   quantities: number[] = [1, 2, 3, 4, 5];
   product!: Product;
-  selectedQuantity: number = 1;
 
   constructor(
     private route: ActivatedRoute,
     private title: Title,
-    private meta: Meta,
-    private cartService: CartService,
-    private router: Router
+    private meta: Meta
   ) {}
 
   ngOnInit(): void {
@@ -63,10 +60,5 @@ export class ProductDetailComponent implements OnInit{
       { property: 'og:image', content: product.imageDetails },
       { name: 'twitter:card', content: 'summary_large_image' }
     ])
-  }
-
-  addToCart(product: Product, quantity: number) {
-    this.cartService.addToCart(product, quantity)
-    this.router.navigate(['/checkout'])
   }
 }
