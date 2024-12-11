@@ -6,6 +6,9 @@
     </button>
     <button [routerLink]="['/checkout']" mat-icon-button aria-label="Cart">
       <mat-icon>shopping_cart</mat-icon>
+      @if(totalQuantity > 0) {
+        <div class="cart-badge">{{ totalQuantity }}</div>
+      }
     </button>
   </div>
 </mat-toolbar>
