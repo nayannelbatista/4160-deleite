@@ -1,8 +1,9 @@
-import { Component, inject, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MatCard, MatCardActions, MatCardContent } from '@angular/material/card';
 import { Router } from '@angular/router';
 
 import { Product } from '../../interfaces/product';
+import { CartService } from '../../services/cart.service';
 
 @Component({
     selector: 'app-product-card',
@@ -16,12 +17,20 @@ import { Product } from '../../interfaces/product';
 })
 
 export class ProductCardComponent {
-  private router = inject(Router)
+
+  constructor(
+    private cartService: CartService,
+    private router: Router
+  ) { }
   
-  @Input() product!: Omit<Product, 'ingredient' | 'category' | 'imageDetails'>;
+  @Input() product!: Product;
   
   goToDetails(productId: number) {
     this.router.navigate(['/details', productId]);
+  }
+
+  addToCart(product: Product) {
+    this.cartService.addToCart(product)
   }
 }
 

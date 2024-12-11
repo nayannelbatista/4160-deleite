@@ -10,7 +10,12 @@
     <p>R${{ product.price }},00</p>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-raised-button color="primary">ADICIONAR AO CARRINHO</button>
+    <button 
+      mat-raised-button 
+      color="primary"
+      (click)="addToCart(product)">
+      ADICIONAR AO CARRINHO
+  </button>
   </mat-card-actions>
 </mat-card>
 
