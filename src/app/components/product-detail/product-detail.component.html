@@ -24,7 +24,7 @@
 
       <mat-form-field appearance="outline">
         <mat-label>Quantidade</mat-label>
-        <mat-select>
+        <mat-select [(ngModel)]="selectedQuantity">
           @for (quantity of quantities; track quantity) {
           <mat-option [value]="quantity">
             {{ quantity }}
@@ -47,7 +47,11 @@
         <textarea matInput></textarea>
       </mat-form-field>
 
-      <button mat-raised-button color="primary" class="add-to-cart">
+      <button 
+        mat-raised-button 
+        color="primary" 
+        class="add-to-cart"
+        (click)="addToCart(product, selectedQuantity)">
         ADICIONAR AO CARRINHO
       </button>
     </div>

@@ -1,4 +1,4 @@
-import { ActivatedRoute, RouterLink } from '@angular/router';
+import { ActivatedRoute, RouterLink, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
@@ -14,6 +14,8 @@ import { Meta, Title } from '@angular/platform-browser';
 import { Product } from '../../interfaces/product';
 import { AppShellNoRenderDirective } from '../../directives/app-shell-no-render.directive';
 import { AppShellRenderDirective } from '../../directives/app-shell-render.directive';
+import { CartService } from '../../services/cart.service';
+import { FormsModule } from '@angular/forms';
 
 @Component({
     selector: 'app-product-detail',
@@ -29,7 +31,8 @@ import { AppShellRenderDirective } from '../../directives/app-shell-render.direc
         MatButtonModule,
         MatIcon,
         MatProgressSpinner,
-        RouterLink
+        RouterLink,
+        FormsModule
     ],
     templateUrl: './product-detail.component.html',
     styleUrl: './product-detail.component.css'
@@ -37,11 +40,14 @@ import { AppShellRenderDirective } from '../../directives/app-shell-render.direc
 export class ProductDetailComponent implements OnInit{
   quantities: number[] = [1, 2, 3, 4, 5];
   product!: Product;
+  selectedQuantity: number = 1;
 
   constructor(
     private route: ActivatedRoute,
     private title: Title,
-    private meta: Meta
+    private meta: Meta,
+    private cartService: CartService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -49,6 +55,11 @@ export class ProductDetailComponent implements OnInit{
     if(this.product) {
       this.setPageMeta(this.product)
     }
+  }
+
+  addToCart(product: Product, quantity: number) {
+    this.cartService.addToCart(product, quantity)
+    this.router.navigate(['/checkout'])
   }
 
   setPageMeta(product: Product) {
