@@ -9,16 +9,15 @@ import { Observable } from 'rxjs';
 import { AppShellRenderDirective } from '../../directives/app-shell-render.directive';
 
 @Component({
-  selector: 'app-products-list',
-  standalone: true,
-  imports: [
-    AppShellRenderDirective,
-    CommonModule,
-    ProductCardComponent,
-    MatProgressSpinnerModule
-  ],
-  templateUrl: './products-list.component.html',
-  styleUrl: './products-list.component.css'
+    selector: 'app-products-list',
+    imports: [
+        AppShellRenderDirective,
+        CommonModule,
+        ProductCardComponent,
+        MatProgressSpinnerModule
+    ],
+    templateUrl: './products-list.component.html',
+    styleUrl: './products-list.component.css'
 })
 export class ProductsListComponent implements OnInit{
 

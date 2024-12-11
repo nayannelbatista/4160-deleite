@@ -5,15 +5,14 @@ import { Router } from '@angular/router';
 import { Product } from '../../interfaces/product';
 
 @Component({
-  selector: 'app-product-card',
-  standalone: true,
-  imports: [
-    MatCard, 
-    MatCardContent, 
-    MatCardActions
-  ],
-  templateUrl: './product-card.component.html',
-  styleUrl: './product-card.component.css'
+    selector: 'app-product-card',
+    imports: [
+        MatCard,
+        MatCardContent,
+        MatCardActions
+    ],
+    templateUrl: './product-card.component.html',
+    styleUrl: './product-card.component.css'
 })
 
 export class ProductCardComponent {
