@@ -1,18 +1,7 @@
 import { Injectable } from '@angular/core';
-import { createClient } from '@supabase/supabase-js';
-import { environment } from '../../environments/environment.development';
 import { from, Observable } from 'rxjs';
 import { Product } from '../interfaces/product';
-
-export const supabase = createClient(
-  environment.supabaseUrl, 
-  environment.supabaseKey, {
-    auth: {
-      persistSession: false,
-      autoRefreshToken: false
-    }
-  }
-)
+import { supabase } from './supabase.client';
 
 @Injectable({
   providedIn: 'root'
