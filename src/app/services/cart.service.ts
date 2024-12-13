@@ -36,15 +36,6 @@ export class CartService {
     })
   }
 
-
-
-
-
-
-
-
-
-
   private saveCartItem(cartItem: CartItem): Observable<void> {
     return from(
       supabase
@@ -52,7 +43,8 @@ export class CartService {
         .upsert({
           product_id: cartItem.product.id,
           quantity: cartItem.quantity
-        })
+        },
+      { onConflict: 'product_id'})
         .then(({ error}) => {
           if(error) throw new Error(error.message)
         })
