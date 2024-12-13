@@ -83,6 +83,18 @@ export class CartService {
       this.saveCartItem(currentItems[itemIndex] || { product, quantity}).subscribe();
   }
 
+  updateCartItem(productId: number, quantity: number) {
+    const currentItems = this.getCurrentItems();
+    const itemIndex = currentItems.findIndex(
+      (item) => item.product.id === productId)
+
+      if(itemIndex >= 0) {
+        currentItems[itemIndex].quantity = quantity
+        this.cartItemsSubject.next(currentItems)
+        this.saveCartItem(currentItems[itemIndex]).subscribe();
+      }
+  }
+
   removeFromCart(productId: number) {
     const updatedItems = this.getCurrentItems()
       .filter((item) => item.product.id !== productId)
