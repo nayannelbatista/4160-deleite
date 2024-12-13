@@ -51,6 +51,19 @@ export class CartService {
     )
   }
 
+
+  private deleteCartItem(productId: number): Observable<void> {
+    return from (
+      supabase
+        .from('cart_items')
+        .delete()
+        .eq('product_id', productId)
+        .then(({ error}) => {
+          if(error) throw new Error(error.message)
+        })
+    )
+  }
+
   private getCurrentItems(): CartItem[] {
     return this.cartItemsSubject.getValue();
   }
@@ -68,6 +81,13 @@ export class CartService {
 
       this.cartItemsSubject.next(currentItems)
       this.saveCartItem(currentItems[itemIndex] || { product, quantity}).subscribe();
+  }
+
+  removeFromCart(productId: number) {
+    const updatedItems = this.getCurrentItems()
+      .filter((item) => item.product.id !== productId)
+    this.cartItemsSubject.next(updatedItems)
+    this.deleteCartItem(productId).subscribe()
   }
 
   getTotalQuantity(): number {
