@@ -4,4 +4,6 @@
     <img src="assets/images/hero-image.png" alt="Mulher tomando milkshake" class="left-image">
   </div>
 </div>
-<app-products-list />
+@defer( hydrate on hover ) {
+  <app-products-list />
+}
