@@ -5,6 +5,7 @@ mat-toolbar {
   display: flex;
   justify-content: space-around;
   width: 100%;
+  align-items: center;
 }
 
 .mat-toolbar-single-row {
@@ -13,14 +14,25 @@ mat-toolbar {
 
 .logo {
   height: 32px;
+  cursor: pointer;
 }
 
 mat-icon {
   color: white;
 }
 
-.toolbar-buttons button:first-child{
-  margin-right: 16px;
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.toolbar-buttons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  a {
+    margin-top: 6px;
+  }
 }
 
 .cart-badge {

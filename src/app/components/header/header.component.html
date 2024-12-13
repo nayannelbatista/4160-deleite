@@ -1,9 +1,11 @@
 <mat-toolbar>
-  <img src="assets/images/logo.png" class="logo">
+  <a [routerLink]="['/']">
+    <img src="assets/images/logo.png" class="logo">
+  </a>
   <div class="toolbar-buttons">
-    <button mat-icon-button aria-label="Search">
-      <mat-icon>search</mat-icon>
-    </button>
+    <a [routerLink]="['/about']">
+      Sobre
+    </a>
     <button [routerLink]="['/checkout']" mat-icon-button aria-label="Cart">
       <mat-icon>shopping_cart</mat-icon>
       @if(totalQuantity > 0) {
