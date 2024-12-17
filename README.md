@@ -2,12 +2,14 @@
 
 # Deleite
 
-**Deleite** é um projeto de e-commerce desenvolvido com Angular, utilizando renderização no servidor (SSR) para proporcionar uma experiência de navegação rápida e otimizada. O projeto inclui uma página inicial com a listagem de produtos e uma página de detalhes para exibir informações específicas de cada item.
+**Deleite** é um projeto de e-commerce desenvolvido com Angular, utilizando renderização no servidor (SSR) para proporcionar uma experiência de navegação rápida e otimizada. O projeto inclui uma página inicial com a listagem de produtos, uma página de detalhes para exibir informações específicas de cada item, uma página de checkout com itens do carrinho e uma página de sobre com informações adicionais.
 
 ## Funcionalidades do projeto
 
 - **Listagem de produtos**: Exibe os produtos disponíveis com imagem e nome.
 - **Tela de detalhes do produto**: Mostra informações detalhadas do produto selecionado, como preço e ingredientes, proporcionando uma experiência de compra mais informativa.
+- **Carrinho de compras**: Permite adicionar e remover produtos, atualizar quantidades e visualizar o total da compra em tempo real.
+- **Página Sobre**: Contém informações sobre o e-commerce.
 
 ## Técnicas e tecnologias utilizadas
 
@@ -18,6 +20,8 @@
 - **Meta Tags Open Graph (OG)**: Implementadas para otimização de SEO e melhor compartilhamento em redes sociais.
 - **Pré-renderização de rotas com SSG (Static Site Generation)**: Utilizada para gerar conteúdo estático para rotas específicas, melhorando a performance e o tempo de resposta.
 - **Otimização de performance**: Técnicas para otimizar o carregamento e a usabilidade.
+- **Hidratação (Hydration)**: Técnica que sincroniza o conteúdo renderizado no servidor com o JavaScript no lado do cliente, melhorando a interatividade.
+- **Persistência de dados**: Uso do banco de dados do Supabase para armazenar produtos e itens do carrinho de maneira segura e eficiente.
 
 ## Link do Figma
 
